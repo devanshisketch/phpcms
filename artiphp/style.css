@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f4f4;
+
+}
+.row {
+    display: flex;
+
+}
+
+.container {
+    width: 1170px;
+}
+
+#header {
+    background: #333333;
+    color: #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar {
+    background-color: #095f59;
+    border-color: #689a9b;
+}
+
+
+.list-group {
+    z-index: 2;
+    color: #fff;
+    background-color: #095f59;
+    border-color: #095f59;
+}
+.panel{
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+
+}
+.panel-handling{
+    background-color: #095f59;
+}
+.panel-default {
+    border-color: #ddd;
+}
+.btn{
+    border: 1px solid #ddd;
+    border-color: #ddd;
+    background-color: red;
+}
+label {
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.badge{
+    float: right;
+    background-color: #333333;
+    border-radius: 3px;
+}
+
+.list-group-item.active>.badge,
+.active>a>.badge {
+    color: #337ab7;
+    background-color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+td,th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 3px;
+}
+view:nth-child(odd){
+    background-color: green;
+}
+
+button.btn{
+    background-color: red;
+    padding: 2px;
+    width: 80px;
+}
+.btn-edit{
+        color: #fff;
+        background-color: #f0ad4e;
+        border-color: #eea236;
+        padding: 4px;
+        border-radius: 4px;
+}
+.label{
+    display: block;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+   
+    border-radius: .25em;
+}
+.label-warning{
+   background-color: yellow;
+}
+.label-danger{
+    background-color: red;
+}
+.label-success{
+    background-color: green;
+}
+.pagination{
+    display: flex;
+    gap:28px;
+    list-style: none;
+}
+.formcontrol{
+    width: 139px;
+}
+.navbar-default {
+    background-color: #095f59;
+    border-color: #689a9b;
+}
+.navbar {
+    min-height: 33px !important;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.navbar-toggle {
+    display: none;
+}
+
+.navbar-toggle {
+position: relative;
+float: right;
+padding: 9px 10px;
+margin-top: 8px;
+margin-right: 15px;
+margin-bottom: 8px;
+background-color: transparent;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+ul.rotate{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    color: black;
+}
+
+
