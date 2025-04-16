@@ -2,14 +2,12 @@
 $server = "127.0.0.1";
 $user = "root";
 $pass = "";
-$dbname ="file";
+$dbname ="image";
 
 $db_con = mysqli_connect($server, $user, $pass,$dbname );
 
 
-if (!$db_con) {
-     die("Connection failed: " . mysqli_connect_error());
- }
+
 ?>
 
 
