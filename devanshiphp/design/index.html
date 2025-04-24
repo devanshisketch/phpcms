@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Colorlib</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -13,6 +13,7 @@
 
 <body>
     <div class="container-fluid">
+        <div class="overlay"></div>
         <header>
             <div class="container">
                 <div class="row d-flex">
@@ -27,9 +28,10 @@
                     <div class="col-3 flex">
                         <div class="con d-flex">
                             <div class="icon">
-                                <span><i class="fa-thin fa-clock " style="color: #63E6BE;"></i></span>
+                                <span><img src="clock.png" alt=""></span>
                             </div>
-                            <div class="text">
+                            <div class="text" style="
+                            width: 122px;">
 
                                 <span>Monday - Friday</span>
                                 <strong>8:00AM-8:00PM</strong>
@@ -55,13 +57,15 @@
                 </div>
             </div>
         </header>
+
         <section id="section" class="photo">
-            <div class="overlay"></div>
+
             <div class="container">
-                <div class="row center" style="display: flex; align-items: center;margin-top: 20px; ">
+                <div class="row center">
                     <div class="col-9">
                         <div class="navigation">
                             <ul class="nav-links">
+                                <li><a href="#">Home</a></li>
                                 <li><a href="#">All Courses</a></li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Team</a></li>
@@ -103,167 +107,249 @@
 
 
         </section>
-        <div class="courses-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 section-title">
-                        <h2>OUR COURSES</h2>
-                        <h1>Explore Our Popular Online Courses</h1>
-                    </div>
+    </div>
+    <div class="courses-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 section-title">
+                    <h2>OUR COURSES</h2>
+                    <h1>Explore Our Popular Online Courses</h1>
                 </div>
-                <div class="row courses-row">
-                    <div class="col-4 course-card">
-                        <div class="course-icon">
-                            <img src="photoshop-icon.png" alt="Photoshop Icon">
-                        </div>
-                        <h3>Enhancing Adobe Photoshop CC 2020 Skills</h3>
-                        <div class="rating">
-                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
-                                class="star">★</span><span class="star">★</span> (5.0)
-                        </div>
-                        <p>by John Smith</p>
-                        <p>90 Lectures (190 hrs)</p>
-                        <div class="course-price">
-                            <span>$100</span> All Course / <span>$15</span> per month
-                        </div>
-                        <button class="enroll-button">ENROLL NOW!</button>
-                    </div>
-                    <div class="col-4 course-card">
-                        <div class="course-icon">
-                            <img src="html-css-js-icon.png" alt="HTML CSS JS Icon">
-                        </div>
-                        <h3>HTML, CSS, and Javascript for Web Developers</h3>
-                        <div class="rating">
-                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
-                                class="star">★</span><span class="star">☆</span> (4.0)
-                        </div>
-                        <p>by John Smith</p>
-                        <p>50 Lectures (140 hrs)</p>
-                        <div class="course-price">
-                            <span>$100</span> All Course / <span>$15</span> per month
-                        </div>
-                        <button class="enroll-button primary">ENROLL NOW!</button>
-                    </div>
-                    <div class="col-4 course-card">
-                        <div class="course-icon">
-                            <img src="wordpress-icon.png" alt="WordPress Icon">
-                        </div>
-                        <h3>Introducing to Programming with WordPress</h3>
-                        <div class="rating">
-                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
-                                class="star">★</span><span class="star">★</span> (5.0)
-                        </div>
-                        <p>by John Smith</p>
-                        <p>100 Lectures (180 hrs)</p>
-                        <div class="course-price">
-                            <span>$100</span> All Course / <span>$15</span> per month
-                        </div>
-                        <button class="enroll-button">ENROLL NOW!</button>
-                    </div>
-                </div>
-
             </div>
-        </div>
-        <div class="browse-courses-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 section-title">
-                        <h2>COURSES</h2>
-                        <h1>Browse Our Online Courses</h1>
+            <div class="row courses-row" style="display: flex;">
+                <div class="col-4 course-card">
+                    <div class="course-icon">
+                        <img src="photoshop-icon.png" alt="Photoshop Icon">
                     </div>
+                    <h3>Enhancing Adobe Photoshop CC 2020 Skills</h3>
+                    <div class="rating">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                            class="star">★</span><span class="star">★</span> (5.0)
+                    </div>
+                    <p>by John Smith</p>
+                    <p>90 Lectures (190 hrs)</p>
+                    <div class="course-price">
+                        <span>$100</span> All Course / <span>$15</span> per month
+                    </div>
+                    <button class="enroll-button">ENROLL NOW!</button>
                 </div>
-                <div class="row courses-grid">
-                    <div class="col-2 course-category highlighted" id="category">
-                        <div class="category-icon">
-                            <img src="1.png" alt="UI/UX Icon">
-                        </div>
-                        <h3>UI/UX Design Courses</h3>
-                        <p>25 Courses</p>
+                <div class="col-4 course-card">
+                    <div class="course-icon">
+                        <img src="html-css-js-icon.png" alt="HTML CSS JS Icon">
                     </div>
-                    <div class="col-2 course-category highlighted" id="category">
-                        <div class="category-icon">
-                            <img src="art-design-icon.png" alt="Art & Design Icon">
-                        </div>
-                        <h3>Art & Design</h3>
-                        <p>25 Courses</p>
+                    <h3>HTML, CSS, and Javascript for Web Developers</h3>
+                    <div class="rating">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                            class="star">★</span><span class="star">☆</span> (4.0)
                     </div>
-                    <div class="col-2 course-category " id="category">
-                        <div class="category-icon">
-                            <img src="computer-science-icon.png" alt="Computer Science Icon">
-                        </div>
-                        <h3>Computer Science</h3>
-                        <p>10 Courses</p>
+                    <p>by John Smith</p>
+                    <p>50 Lectures (140 hrs)</p>
+                    <div class="course-price">
+                        <span>$100</span> All Course / <span>$15</span> per month
                     </div>
-                    <div class="col-2 course-category" id="category">
-                        <div class="category-icon">
-                            <img src="history-archeology-icon.png" alt="History & Archeology Icon">
-                        </div>
-                        <h3>History & Archeologic</h3>
-                        <p>25 Courses</p>
-                    </div>
-                    <div class="col-2 course-category" id="category">
-                        <div class="category-icon">
-                            <img src="health-fitness-icon.png" alt="Health & Fitness Icon">
-                        </div>
-                        <h3>Health & Fitness</h3>
-                        <p>25 Courses</p>
-                    </div>
-                    <div class="col-2 course-category" id="category">
-                        <div class="category-icon">
-                            <img src="marketing-icon.png" alt="Marketing Icon">
-                        </div>
-                        <h3>Marketing</h3>
-                        <p>15 Courses</p>
-                    </div>
+                    <button class="enroll-button primary">ENROLL NOW!</button>
                 </div>
-                <div class="row courses-grid">
-                    <div class="col-2 course-category" id="category">
-                        <div class="category-icon">
-                            <img src="graphic-design-icon.png" alt="Graphic Design Icon">
-                        </div>
-                        <h3>Graphic Design</h3>
-                        <p>25 Courses</p>
+                <div class="col-4 course-card">
+                    <div class="course-icon">
+                        <img src="wordpress-icon.png" alt="WordPress Icon">
                     </div>
-                    <div class="col-2 course-category" id="category">
-                        <div class="category-icon">
-                            <img src="music-icon.png" alt="Music Icon">
-                        </div>
-                        <h3>Music</h3>
-                        <p>25 Courses</p>
+                    <h3>Introducing to Programming with WordPress</h3>
+                    <div class="rating">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                            class="star">★</span><span class="star">★</span> (5.0)
                     </div>
-                    <div class="col-2 course-category" id="category">
-                        <div class="category-icon">
-                            <img src="software-engineering-icon.png" alt="Software Engineering Icon">
-                        </div>
-                        <h3>Software Engineering</h3>
-                        <p>10 Courses</p>
+                    <p>by John Smith</p>
+                    <p>100 Lectures (180 hrs)</p>
+                    <div class="course-price">
+                        <span>$100</span> All Course / <span>$15</span> per month
                     </div>
-                    <div class="col-2 course-category" id="category">
-                        <div class="category-icon">
-                            <img src="business-administration-icon.png" alt="Business Administration Icon">
-                        </div>
-                        <h3>Business Administration</h3>
-                        <p>30 Courses</p>
-                    </div>
-                    <div class="col-2 course-category" id="category">
-                        <div class="category-icon">
-                            <img src="information-software-icon.png" alt="Information Software Icon">
-                        </div>
-                        <h3>Information Software</h3>
-                        <p>25 Courses</p>
-                    </div>
-                    <div class="col-2 course-category" id="category">
-                        <div class="category-icon">
-                            <img src="web-management-icon.png" alt="Web Management Icon">
-                        </div>
-                        <h3>Web Management</h3>
-                        <p>15 Courses</p>
-                    </div>
+                    <button class="enroll-button">ENROLL NOW!</button>
                 </div>
             </div>
 
         </div>
     </div>
-</body>
+    <div class="browse-courses-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 section-title">
+                    <h2>COURSES</h2>
+                    <h1>Browse Our Online Courses</h1>
+                </div>
+            </div>
+            <div class="row courses-grid">
+                <div class="col-2 course-category highlighted" id="category">
+                    <div class="category-icon">
+                        <img src="1.png" alt="UI/UX Icon">
+                    </div>
+                    <h3>UI/UX Design Courses</h3>
+                    <p>25 Courses</p>
+                </div>
+                <div class="col-2 course-category highlighted" id="category">
+                    <div class="category-icon">
+                        <img src="art-design-icon.png" alt="Art & Design Icon">
+                    </div>
+                    <h3>Art & Design</h3>
+                    <p>25 Courses</p>
+                </div>
+                <div class="col-2 course-category " id="category">
+                    <div class="category-icon">
+                        <img src="computer-science-icon.png" alt="Computer Science Icon">
+                    </div>
+                    <h3>Computer Science</h3>
+                    <p>10 Courses</p>
+                </div>
+                <div class="col-2 course-category" id="category">
+                    <div class="category-icon">
+                        <img src="history-archeology-icon.png" alt="History & Archeology Icon">
+                    </div>
+                    <h3>History & Archeologic</h3>
+                    <p>25 Courses</p>
+                </div>
+                <div class="col-2 course-category" id="category">
+                    <div class="category-icon">
+                        <img src="health-fitness-icon.png" alt="Health & Fitness Icon">
+                    </div>
+                    <h3>Health & Fitness</h3>
+                    <p>25 Courses</p>
+                </div>
+                <div class="col-2 course-category" id="category">
+                    <div class="category-icon">
+                        <img src="marketing-icon.png" alt="Marketing Icon">
+                    </div>
+                    <h3>Marketing</h3>
+                    <p>15 Courses</p>
+                </div>
+            </div>
+            <div class="row courses-grid">
+                <div class="col-2 course-category" id="category">
+                    <div class="category-icon">
+                        <img src="graphic-design-icon.png" alt="Graphic Design Icon">
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>25 Courses</p>
+                </div>
+                <div class="col-2 course-category" id="category">
+                    <div class="category-icon">
+                        <img src="music-icon.png" alt="Music Icon">
+                    </div>
+                    <h3>Music</h3>
+                    <p>25 Courses</p>
+                </div>
+                <div class="col-2 course-category" id="category">
+                    <div class="category-icon">
+                        <img src="software-engineering-icon.png" alt="Software Engineering Icon">
+                    </div>
+                    <h3>Software Engineering</h3>
+                    <p>10 Courses</p>
+                </div>
+                <div class="col-2 course-category" id="category">
+                    <div class="category-icon">
+                        <img src="business-administration-icon.png" alt="Business Administration Icon">
+                    </div>
+                    <h3>Business Administration</h3>
+                    <p>30 Courses</p>
+                </div>
+                <div class="col-2 course-category" id="category">
+                    <div class="category-icon">
+                        <img src="information-software-icon.png" alt="Information Software Icon">
+                    </div>
+                    <h3>Information Software</h3>
+                    <p>25 Courses</p>
+                </div>
+                <div class="col-2 course-category" id="category">
+                    <div class="category-icon">
+                        <img src="web-management-icon.png" alt="Web Management Icon">
+                    </div>
+                    <h3>Web Management</h3>
+                    <p>15 Courses</p>
+                </div>
+            </div>
+        </div>
 
-</html>
+    </div>
+    <div class="pricing-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="pricing-header">Our Pricing</h2>
+                    <h3 class="pricing-header">Pricing & Packages</h3>
+                </div>
+            </div>
+            <div class="pricing-grid">
+                <div class="container">
+                    <div class="row d-center">
+                        <div class="col-3">
+                            <div class="plan-card">
+                                <h4 class="plan-name">BASIC PLAN</h4>
+                                <div class="plan-price">$49K</div>
+                                <p class="plan-description">Far far away, behind the word mountains, far from the
+                                    countries
+                                    Vokalia
+                                    and
+                                    Consonantia, there live the blind texts.</p>
+                                <button class="get-started-button">GET STARTED</button>
+                            </div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="col-3">
+                                <h4 class="plan-name">BEGINNER PLAN</h4>
+                                <div class="plan-price">$79K</div>
+                                <p class="plan-description">Far far away, behind the word mountains, far from the
+                                    countries
+                                    Vokalia
+                                    and
+                                    Consonantia, there live the blind texts.</p>
+                                <button class="get-started-button">GET STARTED</button>
+                            </div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="col-3">
+                                <h4 class="plan-name">PREMIUM PLAN</h4>
+                                <div class="plan-price">$109K</div>
+                                <p class="plan-description">Far far away, behind the word mountains, far from the
+                                    countries
+                                    Vokalia
+                                    and
+                                    Consonantia, there live the blind texts.</p>
+                                <button class="get-started-button">GET STARTED</button>
+                            </div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="col-3">
+                                <h4 class="plan-name">ULTIMATE PLAN</h4>
+                                <div class="plan-price">$149K</div>
+                                <p class="plan-description">Far far away, behind the word mountains, far from the
+                                    countries
+                                    Vokalia
+                                    and
+                                    Consonantia, there live the blind texts.</p>
+                                <button class="get-started-button">GET STARTED</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="newsletter-container">
+                        <div class="newsletter-info">
+                            <h2 class="newsletter-title">Newsletter - Stay tune and get the latest update</h2>
+                            <p class="newsletter-description">Far far away, behind the word mountains</p>
+                        </div>
+                        <div class="newsletter-form">
+                            <input type="email" class="email-input" placeholder="Enter email address">
+                            <button class="subscribe-button">enter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+

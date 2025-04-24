@@ -1,0 +1,253 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--orange: #f78e58;
+	--white-alfa-40: rgba(255, 255, 255, 0.40);
+	--white-alfa-25: rgba(255, 255, 255, 0.25);
+	--backdrop-filter: blur(5px);
+	--box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+
+}
+
+body {
+	background-image: url('image/9.jpg');
+	background-position: center;
+
+	width: 100%;
+
+	overflow-x: hidden;
+}
+
+.wraper {
+	width: 100vw;
+	min-height: 100vh;
+	position: relative;
+	background: var(--white-alfa-25);
+	backdrop-filter: var(--backdrop-filter);
+	border: 2px solid var(--white-alfa-40);
+}
+
+header {
+	background: var(--white-alfa-25);
+	backdrop-filter: var(--backdrop-filter);
+	border: 2px solid var(--white-alfa-40);
+	box-shadow: var(--box-shadow);
+	width: 80vw;
+	height: 45vh;
+	margin: 1rem auto;
+	border-radius: 10px;
+	margin-bottom: 1rem;
+	position: relative;
+}
+
+.img {
+	position: absolute;
+	right: -10%;
+	bottom: -25%;
+	width: 250px;
+
+}
+
+.text {
+	position: absolute;
+	left: 5%;
+	bottom: 20%;
+	font-size: 2rem;
+	color: var(--orange);
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	max-width: 75vw;
+	margin: auto;
+	padding: 1rem 0;
+
+}
+
+nav .logo {
+	width: 200px;
+}
+
+sup {
+	position: absolute;
+	top: 5%;
+	background: var(--orange);
+	color: #fff;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	line-height: 25px;
+	text-align: center;
+	padding: .1rem;
+}
+
+
+
+a i {
+	font-size: 3rem;
+	color: var(--orange);
+}
+
+.container {
+	
+	width: 80vw;
+	
+	border: 2px solid var(--white-alfa-40);
+	box-shadow: var(--box-shadow);
+	margin: 2rem auto;
+	border-radius: 20px;
+}
+
+.container form {
+	
+	
+	
+	text-align: center;
+	
+	padding: 5px;
+	border-radius: 20px;
+	
+
+}
+
+form h4 {
+	position: absolute;
+	top: 4%;
+	left: 4%;
+	text-transform: capitalize;
+	color: var(--orange);
+	font-size: 1.5rem;
+}
+
+form p {
+	text-transform: capitalize;
+	font-size: 1.5rem;
+	color: #555;
+}
+
+button {
+	text-transform: uppercase;
+	padding: 1rem;
+	background: var(--orange);
+	
+	outline: none;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	border-radius: 5px;
+}
+
+
+
+button:hover {
+	background: transparent;
+	
+	color: var(--orange);
+}
+
+.cart-container {
+	width: 80vw;
+	min-height: 100vh;
+	position: relative;
+	background: var(--white-alfa-25);
+	backdrop-filter: var(--backdrop-filter);
+	border: 2px solid var(--white-alfa-40);
+	box-shadow: var(--box-shadow);
+	margin: 2rem auto;
+	border-radius: 20px;
+	text-align: center;
+	margin: 2rem auto;
+}
+
+.cart-container h1 {
+	text-transform: uppercase;
+	color: var(--orange);
+	margin: 2rem 0;
+}
+
+.cart-container table {
+	background: var(--white-alfa-25);
+	backdrop-filter: var(--backdrop-filter);
+	box-shadow: var(--box-shadow);
+	border: 2px solid lightgray;
+	padding: 1rem;
+	margin: 1rem auto;
+	text-align: center;
+}
+
+.cart-container table th,
+td {
+	padding: 1rem;
+	text-transform: capitalize;
+}
+
+.cart-container form {
+	border: none;
+	box-shadow: none;
+}
+
+.cart-container input[type=number] {
+	width: 40px;
+	background: var(--white-alfa-25);
+	backdrop-filter: var(--backdrop-filter);
+	box-shadow: var(--box-shadow);
+	border: 2px solid var(--white-alfa-40);
+	padding: 1rem;
+}
+
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 10px; 
+            padding: 20px;
+        }
+
+        .item-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 100px 1fr auto; 
+            grid-template-rows: auto auto auto;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-img {
+            width: 250px;
+            height: auto;
+            display: block; 
+        }
+
+        .item-name {
+            font-weight: bold;
+            grid-column: 2;
+        }
+
+        .item-price {
+            grid-column: 2;
+            color: green;
+        }
+
+        .add-to-cart {
+            grid-column: 3;
+        }
+
+        .add-to-cart a {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .add-to-cart a:hover {
+            background-color: #0056b3;
+        }
+    
