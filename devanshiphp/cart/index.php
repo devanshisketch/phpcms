@@ -21,7 +21,7 @@ session_Start();
         ?>
      <div class="container">
         
-     <?php
+        <?php
             $sql_select = "SELECT * FROM `cart`"; 
             $result = mysqli_query($conn, $sql_select);
  

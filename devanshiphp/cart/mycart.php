@@ -16,7 +16,7 @@ $conn = mysqli_connect($server, $user, $pass, $db_name);
 if (isset($_GET['product_id']) ) {
     $product_id = $_GET['product_id'];
     
-  $sql_insert = "INSERT INTO `addcart` (`id`, `stock`,`productid`) VALUES ( NULL,'0','$product_id')";
+  $sql_insert = "INSERT INTO `addcart` (`id`, `stock`,`productid`) VALUES ( NULL,'1','$product_id')";
 
 
 if (mysqli_query($conn, $sql_insert)) {
@@ -24,6 +24,12 @@ if (mysqli_query($conn, $sql_insert)) {
 } else {
     echo "Error adding item to cart: " . mysqli_error($conn);
 }
+// $sql_update = "UPDATE addcart SET stock = stock + 1 WHERE itemname = '$itemname'";
+// if (mysqli_query($conn, $sql_update)) {
+//     echo "Quantity updated successfully!";
+// } else {
+//     echo "Error updating quantity: " . mysqli_error($conn);
+// }
 
 
 }
@@ -55,7 +61,7 @@ $sel = mysqli_query($conn, $sql_select);
 					<th>id no</th>
 					<th>Item Name</th>
 					<th>Item Price</th>
-					<th>stock</th>
+					<th>Item</th>
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -68,23 +74,24 @@ $sel = mysqli_query($conn, $sql_select);
                         while ($row = mysqli_fetch_assoc($sel)) {
                             $product_id = $row['productid'];
 
-                            $slectcart = "SELECT itemname, itemprice, stock FROM `cart` WHERE id ='$product_id'"; 
+                            $slectcart = "SELECT itemname, itemprice, stock FROM `cart` WHERE id ='$product_id'";
+
                             $result = mysqli_query($conn, $slectcart);
                             $cartRow = mysqli_fetch_assoc($result);
                             $itemname = $cartRow['itemname'];
                             $itemprice = $cartRow['itemprice'];
-                            $stock = $cartRow['stock']; 
-                            $quantity = $row['stock'];
-                            
+                           // $quantity = $row['stock'];
+                           $stock = $cartRow['stock'];
 
                             echo "<tr>";
                             echo "<td>{$row['id']}</td>";
                             echo "<td>{$itemname}</td>";
                             echo "<td>{$itemprice}</td>";
-                            echo "<td>{$stock}</td>"; 
+                            echo "<td><input type='number' class='stock'  data-id='{$row['id']}''{$row['stock']}'' value ='{$row['stock']}'style='color: aqua;'  ></td>";
+                          
                             echo "<td><a href='remove.php?id={$row['id']}' ?\")'>Remove</a> </td>";
                             echo "</tr>";
-                            $totalQuantity += $stock; 
+                          
                         }
                     } else {
                         echo "<tr><td colspan='5'>Your cart is empty.</td></tr>";
@@ -98,3 +105,4 @@ $sel = mysqli_query($conn, $sql_select);
 </div>
 </body>
 </html>
+<script src="cart.js"></script>
