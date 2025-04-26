@@ -1,6 +1,7 @@
 <?php
 session_Start();
     include('connect.php');
+    include('header.php');
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ session_Start();
     <div class="wraper">
         <?php
       
-            include('header.php');
+          
         ?>
      <div class="container">
         

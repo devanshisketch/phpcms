@@ -1,5 +1,7 @@
 
 <?php 
+include('header.php');
+		
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -33,8 +35,7 @@ if (mysqli_query($conn, $sql_insert)) {
 
 
 }
-$sql_select = "SELECT * FROM `addcart`";
-$sel = mysqli_query($conn, $sql_select);
+
 ?>
 
 
@@ -50,8 +51,7 @@ $sel = mysqli_query($conn, $sql_select);
 <body>
 	<div class="wraper">
 		<?php 
-			include('header.php');
-				
+					
 		?>
 	<div class="cart-container">
 		<h1>my cart</h1>
@@ -70,8 +70,9 @@ $sel = mysqli_query($conn, $sql_select);
 
             <?php
                     $totalQuantity = 0; 
-                    if (mysqli_num_rows($sel) > 0) {
-                        while ($row = mysqli_fetch_assoc($sel)) {
+                    $cart_items =showList('addcart',$conn);
+                    if (mysqli_num_rows( $cart_items) > 0) {
+                        while ($row = mysqli_fetch_assoc( $cart_items)) {
                             $product_id = $row['productid'];
 
                             $slectcart = "SELECT itemname, itemprice, stock FROM `cart` WHERE id ='$product_id'";

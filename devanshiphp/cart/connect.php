@@ -24,6 +24,12 @@ if (isset($_GET['submit'])) {
         echo "Error: " . mysqli_error($conn);
     }
 }
+function showList($table,$conn){
+    $sql_select = "SELECT * FROM `addcart`";
+  return $cart_items = mysqli_query($conn, $sql_select);
+
+}
+
 ?>
  <!DOCTYPE html>
  <html lang="en">

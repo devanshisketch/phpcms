@@ -1,5 +1,7 @@
 
-
+<?php
+ include('connect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +22,7 @@
 			<?php
                     $total = 0;
                     
-                    include('connect.php');
+                   
 
                     
                     $sqlcount = "SELECT * FROM `addcart`";
@@ -37,5 +39,3 @@
 			</div>
 		</nav>
 	</header>
-</body>
-</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Like Counter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+       
+        .like-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem; 
+            background-color: #f0f0f0; 
+            color: #1f2937;
+            cursor: pointer;
+            transition: background-color 0.3s ease; 
+            border: 1px solid #d1d5db;
+        }
+
+        .like-button:hover {
+            background-color: #e0e0e0; 
+        }
+
+        .like-button.liked {
+            background-color: #fecaca;
+            color: #b91c1c; 
+            border-color: #fca5a5;
+        }
+
+        .like-count {
+            margin-left: 0.5rem; 
+            font-weight: 600; 
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-inter flex justify-center items-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+        <img id="myImage" src="https://placehold.co/400x200" alt="Placeholder Image" class="mb-4 rounded-md">
+        <div class="flex justify-center">
+            <div id="likeButton" class="like-button">
+                <span id="heartIcon" class="mr-1">❤️</span> <span id="likeCount">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const likeButton = document.getElementById("likeButton");
+        const likeCountElement = document.getElementById("likeCount");
+        const imageId = "myImage"; 
+        let isLiked = false;
+
+        likeButton.addEventListener("click", () => {
+             const formData = new FormData();
+            formData.append('image_id', imageId);
+
+           
+            fetch("like_image.php", { 
+                method: "POST",
+                body: formData, 
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text(); 
+            })
+            .then(data => {
+               
+                likeCountElement.textContent = data;
+                if (!isLiked) {
+                    likeButton.classList.add("liked");
+                    isLiked = true;
+                } else {
+                    likeButton.classList.remove("liked");
+                    isLiked = false;
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Failed to update like count. Please check your network connection."); // Provide user feedback
+            });
+        });
+    </script>
+</body>
+</html>
